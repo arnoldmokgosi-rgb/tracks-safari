@@ -1,0 +1,112 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: ""
+logo_url: "/logo.png"
+
+collections:
+
+  # -------------------------
+  # SITE SETTINGS
+  # -------------------------
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "site-settings/general.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Footer Text", name: "footer", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+
+  # -------------------------
+  # HOME PAGE (index.html)
+  # -------------------------
+  - name: "home"
+    label: "Home Page"
+    files:
+      - name: "home_content"
+        label: "Home Page Content"
+        file: "index.html"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Link to Safari Page", name: "link", widget: "string" }
+
+  # -------------------------
+  # SAFARI PAGES
+  # -------------------------
+  - name: "safaris"
+    label: "Safari Pages"
+    files:
+      - name: "chobe"
+        label: "Chobe National Park"
+        file: "chobe-national-park.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Main Description", name: "description", widget: "text" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Highlight", name: "item", widget: "string" }
+          - label: "Dates"
+            name: "dates"
+            widget: "list"
+            fields:
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Availability", name: "availability", widget: "string" }
+
+      - name: "okavango"
+        label: "Okavango Delta"
+        file: "okavango-delta.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Main Description", name: "description", widget: "text" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Highlight", name: "item", widget: "string" }
+          - label: "Dates"
+            name: "dates"
+            widget: "list"
+            fields:
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Availability", name: "availability", widget: "string" }
+
+      - name: "kalahari"
+        label: "Kalahari Desert"
+        file: "kalahari-desert.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Main Description", name: "description", widget: "text" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            field: { label: "Highlight", name: "item", widget: "string" }
+          - label: "Dates"
+            name: "dates"
+            widget: "list"
+            fields:
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Availability", name: "availability", widget: "string" }
